@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>offix_navigation</name>
+  <version>1.2.4</version>
+  <description>
+    The offix_navigation provides roslaunch scripts for starting the navigation.
+  </description>
+  <maintainer email="noelinnocent369@gmail.com">noel innocent</maintainer>
+  <license>Apache 2.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+</package>

@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<robot name="offix" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find offix_description)/urdf/materials.xacro" />
+
+
+<xacro:include filename="$(find offix_description)/urdf/offix.trans" />
+
+
+<xacro:include filename="$(find offix_description)/gazebo/offix_materials.gazebo" />
+<xacro:include filename="$(find offix_description)/gazebo/offix_physics.gazebo" />
+<xacro:include filename="$(find offix_description)/gazebo/offix_plugins.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0010585559374129971 1.1603861137388093e-06 0.08498069848038411" rpy="0 0 0"/>
+    <mass value="31.25262498334549"/>
+    <inertia ixx="0.781964" iyy="0.82821" izz="1.452354" ixy="-3e-06" iyz="-0.0" ixz="-0.000401"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rwheel_1">
+  <inertial>
+    <origin xyz="1.2851332784882472e-07 -0.016169930670460436 -4.5638473018111414e-07" rpy="0 0 0"/>
+    <mass value="2.2778437947081898"/>
+    <inertia ixx="0.002435" iyy="0.004444" izz="0.002435" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.002452 0.1805 -0.06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/rwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.002452 0.1805 -0.06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/rwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lwheel_1">
+  <inertial>
+    <origin xyz="1.285133202481338e-07 0.016170129363836494 -4.5638473017417525e-07" rpy="0 0 0"/>
+    <mass value="2.2778437947081898"/>
+    <inertia ixx="0.002435" iyy="0.004444" izz="0.002435" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.002452 -0.1805 -0.06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/lwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.002452 -0.1805 -0.06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/lwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cfront_1">
+  <inertial>
+    <origin xyz="-0.04434908440245111 0.029937027175028625 -0.02821046292883443" rpy="0 0 0"/>
+    <mass value="0.3779052559820692"/>
+    <inertia ixx="0.000199" iyy="0.000275" izz="0.000158" ixy="-0.0" iyz="-0.0" ixz="-7.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.202548 0.03 -0.069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/cfront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.202548 0.03 -0.069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/cfront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cback_1">
+  <inertial>
+    <origin xyz="-0.04434908440245125 0.029937027175028625 -0.02821046292883443" rpy="0 0 0"/>
+    <mass value="0.3779052559820692"/>
+    <inertia ixx="0.000199" iyy="0.000275" izz="0.000158" ixy="-0.0" iyz="-0.0" ixz="-7.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.147452 0.03 -0.069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/cback_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.147452 0.03 -0.069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/cback_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="-0.0012345919983550641 -1.4730286323767533e-05 0.019298175843490056" rpy="0 0 0"/>
+    <mass value="1.2982578743862112"/>
+    <inertia ixx="0.000619" iyy="0.00059" izz="0.000863" ixy="0.0" iyz="0.0" ixz="1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.002452 -0.0 -0.163" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.002452 -0.0 -0.163" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://offix_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rjoint" type="continuous">
+  <origin xyz="-0.002452 -0.1805 0.06" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rwheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="ljoint" type="continuous">
+  <origin xyz="-0.002452 0.1805 0.06" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lwheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="cfjoint" type="fixed">
+  <origin xyz="0.202548 -0.03 0.069" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cfront_1"/>
+</joint>
+
+<joint name="cbjoint" type="fixed">
+  <origin xyz="-0.147452 -0.03 0.069" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cback_1"/>
+</joint>
+
+<joint name="lidjoint" type="fixed">
+  <origin xyz="-0.002452 -0.0 0.165" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
